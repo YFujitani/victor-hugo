@@ -13,7 +13,7 @@ import webpackConfig from "./webpack.conf";
 const browserSync = BrowserSync.create();
 
 // Hugo arguments
-const hugoArgsDefault = ["-d", "../dist", "-s", "victor-hugo-sample-site", "-v"];
+const hugoArgsDefault = ["-d", "../dist", "-s", "hugo-site", "-v"];
 const hugoArgsPreview = ["--buildDrafts", "--buildFuture"];
 
 // Development tasks
@@ -69,7 +69,7 @@ function runServer() {
   gulp.watch("./src/js/**/*.js", ["js"]);
   gulp.watch("./src/css/**/*.css", ["css"]);
   gulp.watch("./src/fonts/**/*", ["fonts"]);
-  gulp.watch("./victor-hugo-sample-site/**/*", ["hugo"]);
+  gulp.watch("./hugo-site/**/*", ["hugo"]);
 };
 
 /**
